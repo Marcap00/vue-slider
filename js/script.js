@@ -1,5 +1,41 @@
+const { createApp } = Vue;
 
-
+createApp({
+    data() {
+        return {
+            images: [
+                {
+                    src: 'img/1.jpeg',
+                    title: 'Mountains',
+                    description: 'Una splendida vista su maestose montagne innevate, immerse nella quiete della natura.',
+                },
+                {
+                    src: 'img/2.jpeg',
+                    title: 'Lighthouse',
+                    description: 'Un faro solitario si erge sopra le scogliere, guidando le navi attraverso le acque tempestose.',
+                },
+                {
+                    src: 'img/3.jpeg',
+                    title: 'Iceland',
+                    description: 'Un paesaggio islandese mozzafiato con ghiacciai, vulcani e vasti spazi selvaggi.',
+                },
+                {
+                    src: 'img/4.jpeg',
+                    title: 'Lake',
+                    description: 'Un lago cristallino riflette il cielo sereno, circondato da verdi colline e foreste.',
+                },
+                {
+                    src: 'img/5.jpeg',
+                    title: 'Bridge',
+                    description: 'Un ponte imponente si estende sopra un fiume, collegando due sponde con eleganza e forza.',
+                },
+            ],
+            /* methods: {
+                
+            }, */
+        }
+    }
+}).mount('#app');
 
 
 

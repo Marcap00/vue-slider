@@ -36,6 +36,7 @@ createApp({
         }
     },
     computed: {
+        // Metodo per gestire il ciclo delle immagini
         restartCicle() {
             if (this.activeIndex < 0) {
                 return this.activeIndex = this.images.length - 1;
@@ -73,10 +74,11 @@ createApp({
         },
 
     },
-
+    // Lifecycle hook per l'avvio dell'immagine automatica dopo che i componenti sono stati creati
     created() {
         this.autoPlay();
     },
+    // Lifecycle hook per visualizzare l'indice dell'immagine active dopo che i componenti sono stati aggiornati
     updated() {
         console.log('On the image: ', this.activeIndex);
     }

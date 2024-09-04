@@ -45,9 +45,7 @@ createApp({
                 return this.activeIndex;
             }
         },
-        /* stopAutoPlay(interval) {
-            clearInterval(interval);
-        } */
+
     },
 
     // Methods per gestire la visualizzazione delle immagini
@@ -71,7 +69,6 @@ createApp({
             setInterval(() => {
                 this.activeIndex++;
                 this.restartCicle;
-                this.stopAutoPlay;
             }, 3000);
         },
 

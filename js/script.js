@@ -52,6 +52,9 @@ createApp({
             this.activeIndex = i;
         }
     },
+    updated() {
+        console.log('On the image: ', this.activeIndex);
+    }
 }).mount('#app');
 
 

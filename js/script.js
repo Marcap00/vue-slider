@@ -35,6 +35,7 @@ createApp({
             ]
         }
     },
+
     // Methods per gestire la visualizzazione delle immagini
     methods: {
         // Metodo per tornare all'immagine precedente
@@ -50,7 +51,19 @@ createApp({
         // Metodo per passare all'immagine cliccata nei thumbnails
         currentImage(i) {
             this.activeIndex = i;
-        }
+        },
+        // Metodo per la visualizzazione dell'immagine automatica
+        autoPlay() {
+            setInterval(() => {
+                this.activeIndex++;
+                if (this.activeIndex === this.images.length) this.activeIndex = 0;
+            }, 3000);
+        },
+
+    },
+
+    created() {
+        this.autoPlay();
     },
     updated() {
         console.log('On the image: ', this.activeIndex);

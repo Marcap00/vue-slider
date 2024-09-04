@@ -33,7 +33,8 @@
                             <h2 id="title"> {{ images[activeIndex].title }} </h2>
                             <p id="description" class="fw-semibold"> {{ images[activeIndex].description }} </p>
                         </div>
-                        <img :src="images[activeIndex].src" :alt="images[activeIndex].title" class="active">
+                        <img :src="images[activeIndex].src" :alt="images[activeIndex].title" class="active"
+                            @mouseover="stopAutoPlay()">
                     </div>
                     <i id="right" class="fa-solid fa-chevron-right fa-4x" @click="nextImage()"></i>
                 </div>

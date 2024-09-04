@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            activeIndex: 0,
             images: [
                 {
                     src: 'img/1.jpeg',
@@ -30,11 +31,11 @@ createApp({
                     description: 'Un ponte imponente si estende sopra un fiume, collegando due sponde con eleganza e forza.',
                 },
             ],
-            /* methods: {
-                
-            }, */
         }
-    }
+    },
+    methods: {
+
+    },
 }).mount('#app');
 
 

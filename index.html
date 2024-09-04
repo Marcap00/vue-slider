@@ -23,15 +23,16 @@
 
     <div id="app">
         <!-- Container -->
-        <div class="container">
-            <div id="introduction" class="text-center">
-                <h1 id="title"> {{ images[activeIndex].title }} </h1>
-                <p id="description"> {{ images[activeIndex].description }} </p>
-            </div>
+        <div id="container" class="container-xl">
+
             <div class="wrapper">
                 <div id="carousel">
                     <i id="left" class="fa-solid fa-chevron-left fa-4x" @click="prevImage()"></i>
                     <div id="gallery">
+                        <div id="introduction" class="w-50">
+                            <h2 id="title"> {{ images[activeIndex].title }} </h2>
+                            <p id="description" class="fw-semibold"> {{ images[activeIndex].description }} </p>
+                        </div>
                         <img :src="images[activeIndex].src" :alt="images[activeIndex].title" class="active">
                     </div>
                     <i id="right" class="fa-solid fa-chevron-right fa-4x" @click="nextImage()"></i>

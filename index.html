@@ -37,8 +37,8 @@
                     <i id="right" class="fa-solid fa-chevron-right fa-4x" @click="nextImage()"></i>
                 </div>
                 <div id="thumbnails">
-                    <img :src="images[i].src" :alt="images[i].title" class='active' v-for="(image, i) in images"
-                        class='active'>
+                    <img v-for="(image, i) in images" :src="images[i].src" :alt="images[i].title"
+                        :class="{active: i === activeIndex}" @click="currentImage(i)">
                 </div>
 
             </div>

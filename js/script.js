@@ -35,7 +35,7 @@ createApp({
             ]
         }
     },
-    // Methods per gestire lo visualizzazione delle immagini
+    // Methods per gestire la visualizzazione delle immagini
     methods: {
         // Metodo per tornare all'immagine precedente
         prevImage() {
@@ -46,64 +46,13 @@ createApp({
         nextImage() {
             this.activeIndex++;
             if (this.activeIndex === this.images.length) this.activeIndex = 0;
+        },
+        // Metodo per passare all'immagine cliccata nei thumbnails
+        currentImage(i) {
+            this.activeIndex = i;
         }
     },
 }).mount('#app');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
